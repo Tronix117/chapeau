@@ -5,10 +5,10 @@ if window?
 else unless global?
   global = {}
 
-_ = require 'underscore'
+_ = require 'lodash'
 Chaplin = require 'chaplin'
-View = require 'chapeau/views/view'
-utils = require 'chapeau/lib/utils'
+View = require './view'
+utils = require '../lib/utils'
 
 module.exports = class Layout extends Chaplin.Layout
 

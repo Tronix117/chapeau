@@ -1,6 +1,6 @@
 'use strict'
 
-_ = require 'underscore'
+_ = require 'lodash'
 
 # Utilities
 # ---------

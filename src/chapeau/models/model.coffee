@@ -1,6 +1,6 @@
 'use strict'
 
-_ = require 'underscore'
+_ = require 'lodash'
 Chaplin = require 'chaplin'
 
 module.exports = class Model extends Chaplin.Model

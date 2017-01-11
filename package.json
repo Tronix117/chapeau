@@ -1,29 +1,27 @@
 {
   "name": "chapeau",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An Application Architecture Using Chaplin.js",
   "repository": "git://github.com/tronix117/chapeau.git",
+  "dependencies": {
+    "backbone": "1.1.x",
+    "backbone.collectionsubset": "^0.1.1",
+    "chaplin": "1.0.0",
+    "jquery": "2.2.x",
+    "lodash": "2.4.x"
+  },
   "devDependencies": {
-    "grunt": "0.4.x",
-    "grunt-contrib-coffee": "0.10.x",
-    "grunt-contrib-clean": "0.4.x",
-    "grunt-contrib-concat": "0.1.x",
-    "grunt-contrib-copy": "0.4.x",
-    "grunt-contrib-compress": "0.4.x",
-    "grunt-contrib-watch": "0.1.4",
-    "grunt-bower-task": "0.4.x",
-    "grunt-contrib-uglify": "0.2.x",
-    "grunt-istanbul": "0.2.x",
-    "grunt-urequire": "git://github.com/concordusapps/grunt-urequire",
-    "grunt-coffeelint": "0.0.x",
-    "grunt-mocha": "0.2.x",
-    "grunt-transbrute": "~0.2.0",
-    "prompt": "0.2.x",
-    "phantomjs": "1.9.x"
+    "grunt-cli": "~0.1.13",
+    "coffee-script": "1.10.x",
+    "coffeeify": "~2.0.1",
+    "grunt": "~0.4.5",
+    "grunt-browserify": "~4.0.1",
+    "grunt-contrib-compress": "0.14.x",
+    "grunt-contrib-uglify": "~0.11.1",
+    "grunt-contrib-watch": "~0.6.1"
   },
   "main": "build/chapeau.js",
   "scripts": {
-    "install": "grunt clean build",
-    "test": "grunt prepare test"
+    "build": "grunt build"
   }
 }

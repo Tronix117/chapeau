@@ -5,10 +5,10 @@ if window?
 else unless global?
   global = {}
 
-_ = require 'underscore'
+_ = require 'lodash'
 Chaplin = require 'chaplin'
-Model = require 'chapeau/models/model'
-utils = require 'chapeau/lib/utils'
+Model = require './model'
+utils = require '../lib/utils'
 
 module.exports = class Collection extends Chaplin.Collection
   # Mixin a synchronization state machine

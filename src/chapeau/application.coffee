@@ -5,12 +5,12 @@ if window?
 else unless global?
   global = {}
 
-_ = require 'underscore'
+_ = require 'lodash'
 Chaplin = require 'chaplin'
-utils = require 'chapeau/lib/utils'
-Collection = require 'chapeau/models/collection'
+utils = require './lib/utils'
+Collection = require './models/collection'
 
-global.mediator = mediator = require 'chapeau/mediator'
+global.mediator = mediator = require './mediator'
 
 module.exports = class Application extends Chaplin.Application
   settings:
@@ -78,7 +78,7 @@ module.exports = class Application extends Chaplin.Application
       if @orderedRequireList[topDir]
         if topDir is 'views' and not _.endsWith r, '-view'
           @orderedRequireList.templates.push r
-        else if _(r).startsWith 'helpers/base'
+        else if _.startsWith r, 'helpers/base'
           @orderedRequireList.bases.push r
         else
           @orderedRequireList[topDir].push r
@@ -135,7 +135,7 @@ module.exports = class Application extends Chaplin.Application
         else
           name = _.classify "#{d}-#{type.slice 0, -1}"
 
-      global[name] = @classList[type][d] = require r
+      global[name] = @classList[type][d] = (global.require or require)(r)
     return
 
   start: ->

@@ -5,7 +5,7 @@ if window?
 else unless global?
   global = {}
 
-_ = require 'underscore'
+_ = require 'lodash'
 Chaplin = require 'chaplin'
 
 module.exports = class Controller extends Chaplin.Controller

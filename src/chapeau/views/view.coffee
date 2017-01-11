@@ -5,10 +5,10 @@ if window?
 else unless global?
   global = {}
 
-_ = require 'underscore'
+_ = require 'lodash'
 Chaplin = require 'chaplin'
-Model = require 'chapeau/models/model'
-utils = require 'chapeau/lib/utils'
+Model = require '../models/model'
+utils = require '../lib/utils'
 
 module.exports = class View extends Chaplin.View
   autoRender: yes
